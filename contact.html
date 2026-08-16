@@ -3,26 +3,37 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Contact — Pimp ton shack</title>
+<title>Contact — Pimp ton shack | Soumission gratuite</title>
+<meta name="description" content="Contactez Pimp ton shack pour une soumission gratuite. Rénovation de chalets, terrasses et aménagement intérieur au Québec.">
+<meta property="og:title" content="Contact — Pimp ton shack">
+<meta property="og:description" content="Demandez une soumission gratuite pour votre projet de rénovation.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://pimptonshack.ca/contact.html">
+
+<link rel="icon" type="image/png" href="favicon.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400..700;1,9..144,400..700&family=Vollkorn:wght@400;600;700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="style.css">
-<!-- SDK EmailJS : permet d'envoyer le formulaire sans avoir de serveur -->
 <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
 </head>
 <body>
 
-<nav class="navbar">
+<nav class="navbar" role="navigation" aria-label="Navigation principale">
   <div class="logo">
-    <a href="index.html"><img src="pimptonshack-logo.png" alt="Logo de la compagnie Pimp ton shack"></a>
+    <a href="index.html" aria-label="Retour à l'accueil">
+      <img src="pimptonshack-logo.png" alt="Logo Pimp ton shack" width="64" height="64" loading="eager">
+      <span class="logo-text">Pimp ton shack</span>
+    </a>
   </div>
-  <button class="burger" id="burger" aria-label="Ouvrir le menu" aria-expanded="false">
+  <button class="burger" id="burger" aria-label="Ouvrir le menu" aria-expanded="false" aria-controls="nav-links">
     <span></span><span></span><span></span>
   </button>
   <ul class="nav-links" id="nav-links">
     <li><a href="index.html">Accueil</a></li>
     <li><a href="index.html#services">Services</a></li>
-    <li><a href="index.html#gallery">Réalisations</a></li>
+    <li><a href="index.html#realisations">Réalisations</a></li>
+    <li><a href="index.html#apropos">À propos</a></li>
     <li><a href="contact.html">Contact</a></li>
   </ul>
 </nav>
@@ -34,25 +45,110 @@
   </div>
 </header>
 
+<!-- Coordonnées -->
+<section class="contact-info">
+  <div class="contact-info-grid reveal">
+    <div class="contact-info-item">
+      <svg viewBox="0 0 24 24" width="28" height="28" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+      <strong>Téléphone</strong>
+      <a href="tel:+14185550199">(418) 555-0199</a>
+      <small>Lun–Ven, 8h–17h</small>
+    </div>
+    <div class="contact-info-item">
+      <svg viewBox="0 0 24 24" width="28" height="28" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+      <strong>Courriel</strong>
+      <a href="mailto:info@pimptonshack.ca">info@pimptonshack.ca</a>
+      <small>Réponse sous 24h</small>
+    </div>
+    <div class="contact-info-item">
+      <svg viewBox="0 0 24 24" width="28" height="28" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+      <strong>Zone de service</strong>
+      <span>Laurentides, Lanaudière, Québec</span>
+      <small>Siège social : Saint-Sauveur</small>
+    </div>
+  </div>
+</section>
+
+<!-- Formulaire -->
 <section>
-  <form class="contact-form" id="contact-form">
-    <label for="name">Nom</label>
-    <input type="text" id="name" name="name" required>
+  <form class="contact-form" id="contact-form" novalidate>
+    <div class="form-row">
+      <div class="form-group">
+        <label for="name">Nom complet <span aria-label="obligatoire">*</span></label>
+        <input type="text" id="name" name="name" required placeholder="Jean Tremblay">
+      </div>
+      <div class="form-group">
+        <label for="email">Courriel <span aria-label="obligatoire">*</span></label>
+        <input type="email" id="email" name="email" required placeholder="jean@exemple.ca">
+      </div>
+    </div>
 
-    <label for="email">Courriel</label>
-    <input type="email" id="email" name="email" required>
+    <div class="form-group">
+      <label for="phone">Téléphone (optionnel)</label>
+      <input type="tel" id="phone" name="phone" placeholder="(418) 555-0123">
+    </div>
 
-    <label for="message">Message</label>
-    <textarea id="message" name="message" rows="6" required></textarea>
+    <div class="form-group">
+      <label for="service">Type de projet</label>
+      <select id="service" name="service">
+        <option value="">-- Sélectionnez --</option>
+        <option value="renovation">Rénovation complète</option>
+        <option value="terrasse">Terrasse / Extérieur</option>
+        <option value="interieur">Design intérieur</option>
+        <option value="autre">Autre / Je ne sais pas encore</option>
+      </select>
+    </div>
 
-    <button type="submit" class="cta-button">Envoyer</button>
-    <p class="form-status" id="form-status"></p>
+    <div class="form-group">
+      <label for="message">Décrivez votre projet <span aria-label="obligatoire">*</span></label>
+      <textarea id="message" name="message" rows="6" required placeholder="J'ai un chalet de 800 pi² à Saint-Sauveur. Je veux refaire la terrasse et moderniser la cuisine..."></textarea>
+    </div>
+
+    <button type="submit" class="cta-button" id="submit-btn">
+      <span class="btn-text">Envoyer ma demande</span>
+      <span class="btn-spinner" aria-hidden="true" hidden></span>
+    </button>
+    <p class="form-status" id="form-status" role="status" aria-live="polite"></p>
   </form>
 </section>
 
-<footer>
-  <p>Pimp ton shack — une question, un projet ? <a href="contact.html">Contacte-nous</a>.</p>
-  <p>&copy; 2026 Pimp ton shack. Tous droits réservés.</p>
+<!-- Footer -->
+<footer class="site-footer">
+  <div class="footer-grid">
+    <div class="footer-col">
+      <div class="footer-brand">
+        <img src="pimptonshack-logo.png" alt="" width="48" height="48" loading="lazy">
+        <strong>Pimp ton shack</strong>
+      </div>
+      <p>Rénovation et personnalisation de chalets au Québec.</p>
+    </div>
+    <div class="footer-col">
+      <h4>Services</h4>
+      <ul>
+        <li><a href="index.html#services">Rénovation complète</a></li>
+        <li><a href="index.html#services">Terrasses sur mesure</a></li>
+        <li><a href="index.html#services">Design intérieur</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h4>Contact</h4>
+      <ul>
+        <li><a href="tel:+14185550199">(418) 555-0199</a></li>
+        <li><a href="mailto:info@pimptonshack.ca">info@pimptonshack.ca</a></li>
+        <li>Saint-Sauveur, QC</li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h4>Légal</h4>
+      <ul>
+        <li><a href="contact.html">Mentions légales</a></li>
+        <li><a href="contact.html">Politique de confidentialité</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <p>&copy; 2026 Pimp ton shack. Tous droits réservés.</p>
+  </div>
 </footer>
 
 <script src="main.js"></script>

@@ -3,71 +3,282 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Pimp ton shack — Rénovation et personnalisation de chalets</title>
+<title>Pimp ton shack — Rénovation et personnalisation de chalets au Québec</title>
+<meta name="description" content="Pimp ton shack transforme votre chalet en coup de cœur. Rénovation, terrasses sur mesure et aménagement intérieur dans les Laurentides et région de Québec.">
+<meta name="keywords" content="rénovation chalet, terrasse bois, aménagement intérieur, shack, Laurentides, Québec">
+<meta name="author" content="Pimp ton shack">
+<meta name="robots" content="index, follow">
+
+<!-- Open Graph -->
+<meta property="og:title" content="Pimp ton shack — Rénovation et personnalisation de chalets">
+<meta property="og:description" content="On transforme ton chalet en véritable coup de cœur. Soumission gratuite.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://pimptonshack.ca/">
+<meta property="og:image" content="https://pimptonshack.ca/images/og-image.jpg">
+<meta property="og:locale" content="fr_CA">
+
+<!-- Twitter -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Pimp ton shack">
+<meta name="twitter:description" content="Rénovation et personnalisation de chalets au Québec.">
+
+<!-- Favicon -->
+<link rel="icon" type="image/png" href="favicon.png">
+<link rel="apple-touch-icon" href="apple-touch-icon.png">
+
+<!-- Fonts -->
 <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400..700;1,9..144,400..700&family=Vollkorn:wght@400;600;700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="style.css">
+
+<!-- Schema.org -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "LocalBusiness",
+  "name": "Pimp ton shack",
+  "description": "Rénovation et personnalisation de chalets au Québec",
+  "url": "https://pimptonshack.ca",
+  "telephone": "+1-418-555-0199",
+  "address": {
+    "@type": "PostalAddress",
+    "addressLocality": "Saint-Sauveur",
+    "addressRegion": "QC",
+    "addressCountry": "CA"
+  },
+  "geo": {
+    "@type": "GeoCoordinates",
+    "latitude": "45.87",
+    "longitude": "-74.17"
+  },
+  "priceRange": "$$",
+  "areaServed": {
+    "@type": "Place",
+    "name": "Laurentides, Québec, Lanaudière"
+  },
+  "serviceType": ["Rénovation de chalets", "Construction de terrasses", "Aménagement intérieur"]
+}
+</script>
 </head>
 <body>
 
-<nav class="navbar">
+<!-- ===================== NAVIGATION ===================== -->
+<nav class="navbar" role="navigation" aria-label="Navigation principale">
   <div class="logo">
-    <a href="index.html"><img src="pimptonshack-logo.png" alt="Logo de la compagnie Pimp ton shack"></a>
+    <a href="index.html" aria-label="Retour à l'accueil">
+      <img src="pimptonshack-logo.png" alt="Logo Pimp ton shack" width="64" height="64" loading="eager">
+      <span class="logo-text">Pimp ton shack</span>
+    </a>
   </div>
-  <button class="burger" id="burger" aria-label="Ouvrir le menu" aria-expanded="false">
+  <button class="burger" id="burger" aria-label="Ouvrir le menu" aria-expanded="false" aria-controls="nav-links">
     <span></span><span></span><span></span>
   </button>
   <ul class="nav-links" id="nav-links">
     <li><a href="index.html">Accueil</a></li>
-    <li><a href="index.html#services">Services</a></li>
-    <li><a href="index.html#gallery">Réalisations</a></li>
+    <li><a href="#services">Services</a></li>
+    <li><a href="#realisations">Réalisations</a></li>
+    <li><a href="#apropos">À propos</a></li>
     <li><a href="contact.html">Contact</a></li>
   </ul>
 </nav>
 
+<!-- ===================== HERO ===================== -->
 <header class="hero">
+  <div class="hero-bg" aria-hidden="true"></div>
   <div class="hero-content">
+    <span class="hero-badge">📍 Laurentides & région de Québec</span>
     <h1>Pimp ton shack</h1>
-    <p>On transforme ton chalet en véritable coup de cœur — rénovation, personnalisation et finition sur mesure.</p>
-    <a href="contact.html" class="cta-button">Demander une soumission</a>
+    <p>On transforme ton chalet en véritable coup de cœur — rénovation complète, terrasses sur mesure et finition intérieure artisanale.</p>
+    <div class="hero-actions">
+      <a href="contact.html" class="cta-button">Demander une soumission gratuite</a>
+      <a href="#realisations" class="cta-button cta-secondary">Voir nos réalisations</a>
+    </div>
+    <div class="hero-trust">
+      <span>✓ Soumission sous 48h</span>
+      <span>✓ 5 ans d'expérience</span>
+      <span>✓ Garantie travail</span>
+    </div>
   </div>
 </header>
 
 <div class="plank-divider reveal" aria-hidden="true"></div>
 
+<!-- ===================== SERVICES ===================== -->
 <section class="services" id="services">
-  <h2>Nos services</h2>
+  <div class="section-header reveal">
+    <h2>Nos services</h2>
+    <p>Du plan de travail à la dernière couche de vernis, on s'occupe de tout.</p>
+  </div>
   <div class="service-grid">
-    <div class="service-card reveal">
-      <h3>.</h3>
-      <p>...</p>
-    </div>
-    <div class="service-card reveal">
-      <h3>.</h3>
-      <p>...</p>
-    </div>
-    <div class="service-card reveal">
-      <h3>.</h3>
-      <p>...</p>
-    </div>
+    <article class="service-card reveal">
+      <div class="service-icon" aria-hidden="true">
+        <svg viewBox="0 0 24 24" width="40" height="40" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M3 21h18M5 21V7l8-4 8 4v14M9 21v-6h6v6"/></svg>
+      </div>
+      <h3>Rénovation complète</h3>
+      <p>Charpente, isolation, revêtement extérieur et toiture. On remet ton shack au goût du jour, de la fondation au toit.</p>
+      <span class="service-tag">À partir de 8 000 $</span>
+    </article>
+    <article class="service-card reveal">
+      <div class="service-icon" aria-hidden="true">
+        <svg viewBox="0 0 24 24" width="40" height="40" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M2 22h20M4 22V10l8-6 8 6v12M8 22v-6h8v6"/></svg>
+      </div>
+      <h3>Terrasses & Extérieurs</h3>
+      <p>Terrasse en cèdre, patio, escalier extérieur et aménagement paysager. Du design à l'installation, 100% sur mesure.</p>
+      <span class="service-tag">À partir de 3 500 $</span>
+    </article>
+    <article class="service-card reveal">
+      <div class="service-icon" aria-hidden="true">
+        <svg viewBox="0 0 24 24" width="40" height="40" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M3 9h18M9 21V9"/></svg>
+      </div>
+      <h3>Design intérieur</h3>
+      <p>Cuisine rustique, salle de bain spa, mur en bois de grange et éclairage d'ambiance. On crée l'atmosphère parfaite.</p>
+      <span class="service-tag">Sur devis</span>
+    </article>
   </div>
 </section>
 
 <div class="plank-divider from-right reveal" aria-hidden="true"></div>
 
-<section class="gallery" id="gallery">
-  <h2>Réalisations</h2>
+<!-- ===================== RÉALISATIONS ===================== -->
+<section class="gallery" id="realisations">
+  <div class="section-header reveal">
+    <h2>Réalisations</h2>
+    <p>Quelques projets qu'on a menés de A à Z.</p>
+  </div>
   <div class="gallery-grid">
-    <img src="images/shack1.webp" alt="Rénovation d'un shack, avant/après">
-    <img src="images/shack2.jpg" alt="Terrasse construite sur mesure">
-    <img src="images/projet-3.jpg" alt="Aménagement intérieur d'un chalet">
+    <figure class="gallery-item reveal" data-caption="Rénovation complète — Chalet Val-Morin, 2025">
+      <img src="images/shack1.webp" alt="Rénovation extérieure d'un chalet avec nouveau revêtement en bois" loading="lazy" width="400" height="300">
+      <figcaption>Rénovation complète — Val-Morin</figcaption>
+    </figure>
+    <figure class="gallery-item reveal" data-caption="Terrasse sur mesure — Saint-Sauveur, 2025">
+      <img src="images/shack2.jpg" alt="Grande terrasse en bois avec vue sur le lac" loading="lazy" width="400" height="300">
+      <figcaption>Terrasse sur mesure — Saint-Sauveur</figcaption>
+    </figure>
+    <figure class="gallery-item reveal" data-caption="Aménagement intérieur — Mont-Tremblant, 2024">
+      <img src="images/projet-3.jpg" alt="Intérieur chaleureux d'un chalet avec mur en bois de grange" loading="lazy" width="400" height="300">
+      <figcaption>Intérieur — Mont-Tremblant</figcaption>
+    </figure>
   </div>
 </section>
 
-<footer>
-  <p>Pimp ton shack — une question, un projet ? <a href="contact.html">Contacte-nous</a>.</p>
-  <p>&copy; 2026 Pimp ton shack. Tous droits réservés.</p>
+<div class="plank-divider reveal" aria-hidden="true"></div>
+
+<!-- ===================== TÉMOIGNAGES =====================
+<section class="testimonials" id="temoignages">
+  <div class="section-header reveal">
+    <h2>Ce qu'on dit de nous</h2>
+    <p>Des clients satisfaits, pas de jargon de marketing.</p>
+  </div>
+  <div class="testimonials-grid">
+    <blockquote class="testimonial-card reveal">
+      <p>"On a confié notre vieux shack des années 80 à l'équipe et on l'a récupéré flambant neuf. Travail propre, dans les temps et dans le budget."</p>
+      <footer>
+        <strong>Marc-André D.</strong>
+        <span>— Saint-Sauveur, QC</span>
+      </footer>
+    </blockquote>
+    <blockquote class="testimonial-card reveal">
+      <p>"La terrasse en cèdre qu'ils ont construite est devenue la pièce maîtresse de nos soirées d'été. Vraiment du beau travail artisanal."</p>
+      <footer>
+        <strong>Sophie L.</strong>
+        <span>— Val-Morin, QC</span>
+      </footer>
+    </blockquote>
+    <blockquote class="testimonial-card reveal">
+      <p>"Réactifs, honnêtes et vraiment passionnés. Ils ont su respecter l'esprit rustique du chalet tout en le modernisant."</p>
+      <footer>
+        <strong>Jean-François B.</strong>
+        <span>— Mont-Tremblant, QC</span>
+      </footer>
+    </blockquote>
+  </div>
+</section>
+
+-->
+
+<!-- ===================== À PROPOS ===================== -->
+<section class="about" id="apropos">
+  <div class="about-content reveal">
+    <div class="about-text">
+      <h2>Qui sommes-nous ?</h2>
+      <div class="about-badges">
+        <!-- Mettre un span avec class badge!, pour experience, garantie, nbr projects réalisés-->
+      </div>
+    </div>
+    <div class="about-visual">
+      <div class="about-img-placeholder" role="img" aria-label="Photo de l'équipe Pimp ton shack au travail sur un chantier">
+        <span>Photo équipe<br><small>(à remplacer par une vraie photo)</small></span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== CTA SECTION ===================== -->
+<section class="cta-section reveal">
+  <div class="cta-section-content">
+    <h2>Prêt à transformer ton shack ?</h2>
+    <p>Raconte-nous ton projet. On te prépare une soumission détaillée sous 48 heures, sans engagement.</p>
+    <a href="contact.html" class="cta-button cta-large">Demander ma soumission</a>
+  </div>
+</section>
+
+<!-- ===================== FOOTER ===================== -->
+<footer class="site-footer">
+  <div class="footer-grid">
+    <div class="footer-col">
+      <div class="footer-brand">
+        <img src="pimptonshack-logo.png" alt="" width="48" height="48" loading="lazy">
+        <strong>Pimp ton shack</strong>
+      </div>
+      <p>Rénovation et personnalisation de chalets au Québec. Du bois, du savoir-faire et zéro blabla.</p>
+    </div>
+    <div class="footer-col">
+      <h4>Services</h4>
+      <ul>
+        <li><a href="#services">Rénovation complète</a></li>
+        <li><a href="#services">Terrasses sur mesure</a></li>
+        <li><a href="#services">Design intérieur</a></li>
+        <li><a href="contact.html">Soumission gratuite</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h4>Contact</h4>
+      <ul>
+        <li><a href="tel:+14185550199">(514) 512-7331</a></li>
+        <li><a href="mailto:info@pimptonshack.ca">[À remplacer]</a></li>
+        <li>Lanaudière, QC</li>
+        <li>[HORAIRE - À définir]</li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h4>Légal</h4>
+      <ul>
+        <li><a href="contact.html">Mentions légales</a></li>
+        <li><a href="contact.html">Politique de confidentialité</a></li>
+      </ul>
+      <div class="footer-socials">
+        <a href="#" aria-label="Facebook"><svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg></a>
+        <a href="#" aria-label="Instagram"><svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor"><rect x="2" y="2" width="20" height="20" rx="5" ry="5" fill="none" stroke="currentColor" stroke-width="2"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z" fill="none" stroke="currentColor" stroke-width="2"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg></a>
+      </div>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <p>&copy; 2026 Pimp ton shack. Tous droits réservés.</p>
+  </div>
 </footer>
+
+<!-- CTA Sticky Mobile -->
+<a href="contact.html" class="cta-sticky" aria-label="Demander une soumission">
+  <span>🛠️ Soumission gratuite</span>
+</a>
+
+<!-- Lightbox -->
+<div class="lightbox" id="lightbox" role="dialog" aria-modal="true" aria-label="Aperçu de l'image" hidden>
+  <button class="lightbox-close" aria-label="Fermer">&times;</button>
+  <img src="" alt="" id="lightbox-img">
+  <p class="lightbox-caption" id="lightbox-caption"></p>
+</div>
 
 <script src="main.js"></script>
 </body>
