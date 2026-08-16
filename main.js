@@ -113,12 +113,35 @@ if (form && window.emailjs) {
 
     const emailIsValid = /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
 
-    if (!name || !message || !emailIsValid) {
-      statusEl.textContent = "Vérifie que tous les champs obligatoires sont bien remplis (et le courriel valide).";
-      statusEl.className = "form-status error";
-      form.querySelector('[name="name"]').focus();
-      return;
-    }
+    const messageWords = message
+  .split(/\s+/)
+  .filter(word => word.length > 0);
+
+const wordCount = messageWords.length;
+
+if (!name || !emailIsValid || !service || service === 'none' || wordCount < 25) {
+  if (!name || !emailIsValid) {
+    statusEl.textContent = "Vérifie que ton nom et ton courriel sont bien remplis.";
+  } else if (!service || service === 'none') {
+    statusEl.textContent = "Veuillez sélectionner un type de projet.";
+  } else if (wordCount < 25) {
+    statusEl.textContent = `Décris un peu plus ton projet : il faut au minimum 25 mots (actuellement ${wordCount}).`;
+  }
+
+  statusEl.className = "form-status error";
+
+  if (!name) {
+    form.querySelector('[name="name"]').focus();
+  } else if (!emailIsValid) {
+    form.querySelector('[name="email"]').focus();
+  } else if (!service || service === 'none') {
+    form.querySelector('[name="service"]').focus();
+  } else {
+    form.querySelector('[name="message"]').focus();
+  }
+
+  return;
+}
 
     // Loading state
     const btnText = submitBtn.querySelector('.btn-text');
