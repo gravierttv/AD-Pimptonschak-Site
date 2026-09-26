@@ -388,8 +388,8 @@ img { max-width: 100%; height: auto; }
 }
 
 /* =========================================================
-   SERVICES
-   ========================================================= */
+ SERVICES
+ ========================================================= */
 
 .services {
   padding: 80px 24px;
@@ -468,6 +468,7 @@ img { max-width: 100%; height: auto; }
   padding: 0 24px 80px;
   max-width: 1100px;
   margin: 0 auto;
+  translate: 0px 20px;
 }
 
 .gallery-grid {
@@ -958,9 +959,23 @@ img { max-width: 100%; height: auto; }
   text-align: center;
   padding: 20px 24px;
   border-top: 1px solid rgba(92, 64, 40, 0.3);
+  translate: 0px;
 }
 
 .footer-bottom p {
+  margin: 0;
+  color: #8A7A64;
+  font-size: 0.9rem;
+}
+
+.footer-bottom2 {
+  text-align: center;
+  padding: 20px 24px;
+  border-top: 1px solid rgba(92, 64, 40, 0.3);
+  translate: 0px 40px;
+}
+
+.footer-bottom2 p {
   margin: 0;
   color: #8A7A64;
   font-size: 0.9rem;

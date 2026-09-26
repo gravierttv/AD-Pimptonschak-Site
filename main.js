@@ -119,13 +119,13 @@ if (form && window.emailjs) {
 
 const wordCount = messageWords.length;
 
-if (!name || !emailIsValid || !service || service === 'none' || wordCount < 25) {
+if (!name || !emailIsValid || !service || service === 'none' || wordCount < 10) {
   if (!name || !emailIsValid) {
     statusEl.textContent = "Vérifie que ton nom et ton courriel sont bien remplis.";
   } else if (!service || service === 'none') {
     statusEl.textContent = "Veuillez sélectionner un type de projet.";
   } else if (wordCount < 25) {
-    statusEl.textContent = `Décris un peu plus ton projet : il faut au minimum 25 mots (actuellement ${wordCount}).`;
+    statusEl.textContent = `Décris un peu plus ton projet : il faut au minimum 10 mots (actuellement ${wordCount}).`;
   }
 
   statusEl.className = "form-status error";
